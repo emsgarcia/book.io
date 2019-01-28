@@ -12,8 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('sample');
 });
+
+Route::get('admindashboard', 'AdminController@showDashboard');
+Route::post('/addbook', 'AdminController@saveBook');
 
 Auth::routes();
 
